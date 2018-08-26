@@ -28,6 +28,7 @@ env:
 
 install:
   - sudo -E apt-add-repository -y "ppa:jonathonf/python-2.7"
+  - sudo apt-get update
   - sudo apt-get -y install python2.7
 
 script:
