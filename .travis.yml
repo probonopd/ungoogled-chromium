@@ -21,6 +21,7 @@ addons:
       - lld-6.0
       - llvm-6.0-dev
       - ninja-build
+      - python2.7-minimal
 
 env:
   - AR=llvm-ar-6.0 NM=llvm-nm-6.0 CC=clang-6.0 CXX=clang++-6.0
@@ -31,7 +32,8 @@ install:
 # - source /opt/qt*/bin/qt*-env.sh
 
 script:
-  - sudo rm -rf /usr/bin/python /usr/bin/python ; ln -s /usr/bin/python3.6 /usr/bin/python3 ; ; ln -s /usr/bin/python3.6 /usr/bin/python # https://travis-ci.org/probonopd/ungoogled-chromium/builds/420686866#L1309
+  - sudo rm -rf /usr/bin/python /usr/bin/python2 ; sudo ln -s /usr/bin/python2.7 /usr/bin/python ; sudo ln -s /usr/bin/python2.7 /usr/bin/python2
+  - sudo rm -rf /usr/bin/python3 ; sudo ln -s /usr/bin/python3.6 /usr/bin/python3 ; sudo ln -s /usr/bin/python3.6 /usr/bin/python # https://travis-ci.org/probonopd/ungoogled-chromium/builds/420686866#L1309
   - mkdir -p build/src
   - ./get_package.py linux_simple build/src/ungoogled_packaging
   - cd build/src
