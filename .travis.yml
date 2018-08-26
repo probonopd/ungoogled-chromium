@@ -12,19 +12,20 @@ addons:
     sources:
       - sourceline: "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-6.0 main"
       - ubuntu-toolchain-r-test
-      - jonathonf/python-3.6
+#      - ppa:jonathonf/python-3.6
     packages:
       - clang-6.0
       - lld-6.0
       - llvm-6.0-dev
-      - python3.6
+#      - python3.6
       - ninja-build
 
 env:
   - AR=llvm-ar-6.0 NM=llvm-nm-6.0 CC=clang-6.0 CXX=clang++-6.0
 
-# install:
-#  - sudo apt-get -y install 
+install:
+  - sudo -E apt-add-repository -y "ppa:jonathonf/python-3.6"
+  - sudo apt-get -y install python3.6
 # - source /opt/qt*/bin/qt*-env.sh
 
 script:
