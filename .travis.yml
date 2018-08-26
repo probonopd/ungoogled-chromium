@@ -29,11 +29,11 @@ env:
 install:
   - sudo -E apt-add-repository -y "ppa:jonathonf/python-2.7"
   - sudo apt-get -y install python2.7
-# - source /opt/qt*/bin/qt*-env.sh
 
 script:
   - sudo rm -rf /usr/bin/python /usr/bin/python2 ; sudo ln -s /usr/bin/python2.7 /usr/bin/python ; sudo ln -s /usr/bin/python2.7 /usr/bin/python2
-  - sudo rm -rf /usr/bin/python3 ; sudo ln -s /usr/bin/python3.6 /usr/bin/python3 ; sudo ln -s /usr/bin/python3.6 /usr/bin/python # https://travis-ci.org/probonopd/ungoogled-chromium/builds/420686866#L1309
+  - sudo rm -rf /usr/bin/python3 ; sudo ln -s /usr/bin/python3.6 /usr/bin/python3 # https://travis-ci.org/probonopd/ungoogled-chromium/builds/420686866#L1309
+  - python2 --version
   - mkdir -p build/src
   - ./get_package.py linux_simple build/src/ungoogled_packaging
   - cd build/src
