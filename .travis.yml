@@ -11,12 +11,17 @@ addons:
   apt:
     sources:
       - sourceline: "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-6.0 main"
-      - sourceline: "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates main restricted"
-      - sourceline: "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe"
-      - sourceline: "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe"
+      - ubuntu-toolchain-r-test
+    packages:
+      - clang-6.0
+      - lld-6.0
+      - llvm-6.0-dev
+      - python
+      - python3
+      - ninja-build
       
-install:
-  - sudo apt-get -y install clang-6.0 lld-6.0 llvm-6.0-dev python python3 ninja-build
+# install:
+#  - sudo apt-get -y install 
 # - source /opt/qt*/bin/qt*-env.sh
 
 script:
