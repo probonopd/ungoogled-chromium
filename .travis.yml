@@ -27,7 +27,7 @@ env:
 # - source /opt/qt*/bin/qt*-env.sh
 
 script:
-  - git checkout 3162b8c3c4dc98cd424fd7966539154d69a1d7a2
+  - wget -q "https://raw.githubusercontent.com/Eloston/ungoogled-chromium/2a39d4c7d968dbbbef5580a6c771eec023cbb3ee/buildkit/common.py" > buildkit/common.py
   - mkdir -p build/src
   - ./get_package.py linux_simple build/src/ungoogled_packaging
   - cd build/src
