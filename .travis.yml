@@ -27,6 +27,7 @@ env:
 # - source /opt/qt*/bin/qt*-env.sh
 
 script:
+  - git checkout 3162b8c3c4dc98cd424fd7966539154d69a1d7a2
   - mkdir -p build/src
   - ./get_package.py linux_simple build/src/ungoogled_packaging
   - cd build/src
