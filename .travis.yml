@@ -31,6 +31,7 @@ install:
 # - source /opt/qt*/bin/qt*-env.sh
 
 script:
+  - sudo rm -rf /usr/bin/python /usr/bin/python ; ln -s /usr/bin/python3.6 /usr/bin/python3 ; ; ln -s /usr/bin/python3.6 /usr/bin/python # https://travis-ci.org/probonopd/ungoogled-chromium/builds/420686866#L1309
   - mkdir -p build/src
   - ./get_package.py linux_simple build/src/ungoogled_packaging
   - cd build/src
