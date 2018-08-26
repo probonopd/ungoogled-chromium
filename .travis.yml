@@ -3,7 +3,7 @@
 # It defaults to LLVM tools. See ./ungoogled_packaging/build.sh for more details
 
 language: cpp
-compiler: gcc
+compiler: llvm
 sudo: require
 dist: trusty
 
