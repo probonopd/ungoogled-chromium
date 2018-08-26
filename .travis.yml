@@ -20,10 +20,7 @@ addons:
       - ninja-build
 
 env:
-  - AR=llvm-ar-6.0
-  - NM=llvm-nm-6.0
-  - CC=clang-6.0
-  - CXX=clang++-6.0
+  - AR=llvm-ar-6.0 NM=llvm-nm-6.0 CC=clang-6.0 CXX=clang++-6.0
 
 # install:
 #  - sudo apt-get -y install 
