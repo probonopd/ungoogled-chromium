@@ -12,11 +12,12 @@ addons:
     sources:
       - sourceline: "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-6.0 main"
       - ubuntu-toolchain-r-test
+      - jonathonf/python-3.6
     packages:
       - clang-6.0
       - lld-6.0
       - llvm-6.0-dev
-      - python3
+      - python3.6
       - ninja-build
 
 env:
@@ -27,7 +28,6 @@ env:
 # - source /opt/qt*/bin/qt*-env.sh
 
 script:
-  - wget -q "https://raw.githubusercontent.com/Eloston/ungoogled-chromium/2a39d4c7d968dbbbef5580a6c771eec023cbb3ee/buildkit/common.py" > buildkit/common.py
   - mkdir -p build/src
   - ./get_package.py linux_simple build/src/ungoogled_packaging
   - cd build/src
