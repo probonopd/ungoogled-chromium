@@ -16,10 +16,15 @@ addons:
       - clang-6.0
       - lld-6.0
       - llvm-6.0-dev
-      - python
       - python3
       - ninja-build
-      
+
+env:
+  - AR=llvm-ar-6.0
+  - NM=llvm-nm-6.0
+  - CC=clang-6.0
+  - CXX=clang++-6.0
+
 # install:
 #  - sudo apt-get -y install 
 # - source /opt/qt*/bin/qt*-env.sh
